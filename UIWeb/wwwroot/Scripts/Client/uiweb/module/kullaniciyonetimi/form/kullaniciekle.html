@@ -1,0 +1,110 @@
+<div class="modal fade" id="modal-kullaniciekle" tabindex="-1" role="dialog" aria-labelledby="remoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-medium width-800">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" modal-close="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 kelimeadi='kullaniciekle' class="modal-title">Kullanıcı Ekle</h4>
+            </div>
+            <div class="modal-body">
+                <div class="parametrepanel">
+                    <input type="hidden" name="userid" />
+                    <input type="hidden" name="grupfirmaid" />                          
+                    <input type="hidden" name="yetkimenuid" data-uiwebinput="{constant:true}" />
+                </div>
+
+                <div class="row">
+                    <div class="form-horizontal">
+                        <div class="col-md-6">
+
+                            <div class="form-group usernamepanel hide">
+                                <label kelimeadi="loginname" class="col-sm-4 col-md-4 col-lg-4  control-label">Login Name</label>
+                                <div class="col-sm-8 col-md-8 col-lg-8 control-label">
+                                    <span name="username" class="font-bold required" data-uiwebelement="{}" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label kelimeadi='yetkigrubu' class="col-sm-4 col-md-4 col-lg-4 control-label">Yetki Grubu :</label>
+                                <div class="col-sm-8 col-md-8 col-lg-8">
+                                    <select class="form-control required" name="grupid" data-uiwebselect="{design:{type:'dynamic',value:'id',label:'grupadi',clearoptions:false},proxy:{controller:'Grup',action:'GrupListesiCombo',value:['grupfirmaid']}}"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label kelimeadi='gorevi' class="col-sm-4 col-md-4 col-lg-4 control-label">Görevi :</label>
+                                <div class="col-sm-8 col-md-8 col-lg-8">
+                                    <select class="form-control required" name="kullaniciturid" data-uiwebselect="{design:{type:'dynamic',value:'id',label:'turadi',clearoptions:false},proxy:{controller:'KullaniciSabit',action:'KullaniciTurListesi'}}"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label kelimeadi='adi' class="col-sm-4 col-md-4 col-lg-4 control-label">Adı :</label>
+                                <div class="col-sm-8 col-md-8 col-lg-8">
+                                    <input class="form-control required" maxlength="30" name="name" type="text" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label kelimeadi='soyadi' class="col-sm-4 col-md-4 col-lg-4 control-label">Soyadı :</label>
+                                <div class="col-sm-8 col-md-8 col-lg-8">
+                                    <input class="form-control required" maxlength="30" name="surname" type="text" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label kelimeadi='tckimlikno' class="col-sm-4 col-md-4 col-lg-4 control-label">TC Kimlik No :</label>
+                                <div class="col-md-4">
+                                    <input class="form-control required" name="tckimlikno" type="text" data-uiwebinput="{data_mask:'99999999999',input_type:1}" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label kelimeadi='vergino' class="col-sm-4 col-md-4 col-lg-4 control-label">Vergi No :</label>
+                                <div class="col-md-4">
+                                    <input class="form-control" name="vergino" type="text" data-uiwebinput="{data_mask:'9999999999'}" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label kelimeadi='e_posta' class="col-sm-4 col-md-4 col-lg-4 control-label">E-posta :</label>
+                                <div class="col-sm-8 col-md-8 col-lg-8">
+                                    <input class="form-control required" maxlength="50" name="email" type="email" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label kelimeadi='gsm' class="col-sm-4 col-md-4 col-lg-4 control-label">GSM :</label>
+                                <div class="col-md-4">
+                                    <input class="form-control required" name="gsm" type="tel" data-uiwebinput="{}" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label kelimeadi='cinsiyet' class="col-sm-4 col-md-4 col-lg-4 control-label">Cinsiyet :</label>
+                                <div class="col-md-7">
+                                    <label class="radio radio-inline">
+
+                                        <input type="radio" class="radiobox Cinsiyet" name="cinsiyetid" value="1" data-uiwebradio="{}" />
+                                        <span>Erkek</span>
+
+                                    </label>
+                                    <label class="radio radio-inline">
+                                        <input type="radio" class="radiobox Cinsiyet" name="cinsiyetid" value="2" data-uiwebradio="{}" />
+                                        <span>Kadın</span>
+                                    </label>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnKullaniciKaydet" data-uiwebbutton="{design:{ButtonType:uiWeb.ButtonTypeEnum.Kaydet,MenuId:uiWeb.EntitiyMenuEnum.KullaniciListesi,Actions:[9,10]}}"></button>
+                <button type="button" data-uiwebbutton="{design:{ButtonType:uiWeb.ButtonTypeEnum.Kapat}}"></button>
+            </div>
+        </div>
+    </div>
+
+</div>

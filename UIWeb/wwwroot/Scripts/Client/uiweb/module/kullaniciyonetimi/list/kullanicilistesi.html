@@ -1,0 +1,35 @@
+<table id="dtKullaniciListesi" width="100%" data-uiwebgrid="{proxy:{controller:'Kullanici',action:'KullaniciListesi',value:[]},
+                                                                                    design:{showTitle:true,ordering:false,gridTitle:'Kullanici Listesi', autoload:false,isPaging:true,pageSize:10},
+                                                                                    colModel:[{ data: 'islem',order:{type:'button',buttons:'x'},hClass:'detail-showhide', sClass:'detail-showhide'},
+                                                                                              { data: 'islem',order:{type:'button',buttons:'e'}},
+                                                                                              { data: 'islem',order:{type:'button',buttons:'sifre'},sClass:'td-sifre'},
+                                                                                              { data: 'islem',order:{type:'button',buttons:'p',title:'Pasif Yap'},sClass:'td-durum'},
+                                                                                              { data: 'firmaadi',hClass:'hide',sClass:'hide'},
+                                                                                              { data: 'name'},
+                                                                                              { data: 'surname'},
+                                                                                              { data: 'status'},
+                                                                                              { data: 'turadi'},
+                                                                                              { data: 'grupadi'},
+                                                                                              { data: 'tckimlikno'},
+                                                                                              { data: 'email'},
+                                                                                              { data: 'gsm'}]}">
+    <thead>
+        <tr>
+            <th data-class="expand"></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th data-class="phone,tablet" kelimeadi='FirmaAdi'>Firma Adı</th>
+            <th data-class="phone" kelimeadi='adi'>Adı</th>
+
+            <th data-class="phone" kelimeadi='soyadi'>Soyadı</th>
+            <th data-class="phone" kelimeadi='durum'>Durum</th>
+            <th data-class="phone" kelimeadi='gorevi'>Görevi</th>
+
+            <th data-hide="phone" kelimeadi='kullanicigrubu'>Kullanıcı Grubu</th>
+            <th data-hide="phone" kelimeadi='tckimlikno'>Tc Kimlik No</th>
+            <th data-hide="phone,tablet" kelimeadi='e_posta'>E-posta</th>
+            <th data-hide="phone,tablet" kelimeadi='ceptelefonu'>Cep Telefonu</th>
+        </tr>
+    </thead>
+</table>

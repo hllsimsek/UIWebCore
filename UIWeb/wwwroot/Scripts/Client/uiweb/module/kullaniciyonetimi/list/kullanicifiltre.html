@@ -1,0 +1,56 @@
+<div class="modal fade" id="modal-kullanicifiltre" tabindex="-1" role="dialog" aria-labelledby="remoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-medium width-400">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" modal-close="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 kelimeadi='filtre' class="modal-title">Filtre</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-horizontal">
+
+                            <div class="form-group">
+                                <label kelimeadi='adi' class="col-md-3 control-label">Adı :</label>
+                                <div class="col-md-9">
+                                    <input class="form-control" name="name" type="text" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label kelimeadi='soyadi' class="col-md-3 control-label">Soyadı :</label>
+                                <div class="col-md-9">
+                                    <input class="form-control" name="surname" type="text" />
+                                </div>
+                            </div>
+                 
+
+                            <div class="form-group">
+                                <label kelimeadi='durum' class="col-md-3 control-label">Durum :</label>
+                                <div class="col-md-9">
+                                    <select class="form-control" id="statuscode" name="statuscode" data-uiwebselect="{design:{type:'static',value:'statuscode',label:'status',search:true},proxy:{controller:'KullaniciSabit',action:'KullaniciStatuListesi'}}"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label kelimeadi='gorevi' class="col-md-3 control-label">Görevi :</label>
+                                <div class="col-md-9">
+                                    <select class="form-control" id="kullaniciturid" name="kullaniciturid" data-uiwebselect="{design:{type:'static',value:'id',label:'turadi',search:true},proxy:{controller:'KullaniciSabit',action:'KullaniciTurListesi'}}"></select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="formutemizle" name="btnformutemizle" data-uiwebbutton="{design:{ButtonType:uiWeb.ButtonTypeEnum.Temizle}}" ></button>
+                <button type="button" id="listele" data-uiwebbutton="{design:{ButtonType:uiWeb.ButtonTypeEnum.Listele}}" modal-close="modal"></button>
+                <button type="button" data-uiwebbutton="{design:{ButtonType:uiWeb.ButtonTypeEnum.Kapat}}" ></button>
+            </div>
+        </div>
+    </div>
+</div>
+
